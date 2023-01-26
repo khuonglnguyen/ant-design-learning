@@ -1,8 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import { Button } from 'antd';
+import logo from "./logo.svg";
+import "./App.css";
+import { Button } from "antd";
+import { useState } from "react";
+import { PoweroffOutlined } from "@ant-design/icons";
 
 function App() {
+  const [loading, setLoading] = useState(false);
+
+  const handleClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      alert("Button is clicked!");
+    }, 2000);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,7 +22,14 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <Button type='primary'>My Button</Button>
+        <Button
+          type="primary"
+          onClick={handleClick}
+          loading={loading}
+          icon={<PoweroffOutlined></PoweroffOutlined>}
+        >
+          My Button
+        </Button>
       </header>
     </div>
   );
