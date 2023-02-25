@@ -1,5 +1,5 @@
 import "../../App.css";
-import { Button, Input, Select } from "antd";
+import { Button, DatePicker, Input, Select, TimePicker } from "antd";
 import { useState } from "react";
 import {
   PoweroffOutlined,
@@ -51,6 +51,9 @@ function Home() {
           prefix={<UserAddOutlined></UserAddOutlined>}
           allowClear
         ></Input.Search>
+        <DatePicker></DatePicker>
+        <DatePicker.RangePicker></DatePicker.RangePicker>
+        <TimePicker></TimePicker>
         <Button
           type="primary"
           onClick={handleClick}
