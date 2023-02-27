@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import TablePage from "./pages/table";
+import SpinPage from "./pages/spin";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/table" element={<TablePage />} />
+        <Route path="/spin" element={<SpinPage />} />
       </Routes>
     </BrowserRouter>
   );
